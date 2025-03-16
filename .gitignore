@@ -1,0 +1,9 @@
+.vscode
+.python-version
+__pycache__
+# temporary files
+found-model.lp
+legacy-model.lp
+tmp-*
+old
+presolved*/*.log
