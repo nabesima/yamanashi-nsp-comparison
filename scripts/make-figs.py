@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 import argparse
-import itertools
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
+import holoviews as hv
+from holoviews import opts
+from bokeh.models import HoverTool
+from bokeh.io import output_file as bokeh_output_file, save
+hv.extension('bokeh')
 
-def plot_cactus(csv_file, output_file, type):
+def plot_matplotlib_cactus(csv_file, output_file, type):
     """Read data from the CSV file and generate a cactus plot using gnuplotlib."""
     df_raw = pd.read_csv(csv_file, index_col=0)
     # print(df_raw)
@@ -46,7 +51,6 @@ def plot_cactus(csv_file, output_file, type):
     for col in obj_columns:
         if col[0] in df.columns:
             size += 1
-
 
     # plt.figure(figsize=(10, 6))
     if size <= 15:
@@ -140,15 +144,126 @@ def plot_cactus(csv_file, output_file, type):
     plt.savefig(output_file, format=output_file.split('.')[-1])
     print(f"Saved plot to {output_file}")
 
+markers = hv.Cycle([
+    'asterisk', 'circle', 'circle_cross', 'circle_x',
+    'cross', 'dash', 'diamond', 'diamond_cross', 'hex',
+    'inverted_triangle', 'square', 'square_cross', 'square_x', 'triangle', 'x'])
+
+def hide_hover_icon(plot, element):
+    for tool in plot.state.toolbar.tools:
+        if isinstance(tool, HoverTool):
+            tool.visible = False  # Hoverツールのアイコンを非表示
+
+def plot_holoviews_cactus(csv_file, output_file, type):
+    df_raw = pd.read_csv(csv_file, index_col=0)
+
+    obj_columns = [
+        (f"mp-p-low-{type}", "MP-Low"),
+        (f"mp-p-mid-{type}", "MP-Mid"),
+        (f"mp-p-hi-{type}", "MP-High"),
+        (f"mp-is-p-low-{type}", "MP+IS-Low"),
+        (f"mp-is-p-mid-{type}", "MP+IS-Mid"),
+        (f"mp-is-p-hi-{type}", "MP+IS-High"),
+        (f"mp-is1-p-low-{type}", "MP+IS1-Low"),
+        (f"mp-is1-p-mid-{type}", "MP+IS1-Mid"),
+        (f"mp-is1-p-hi-{type}", "MP+IS1-High"),
+        (f"mp-is10-p-low-{type}", "MP+IS10-Low"),
+        (f"mp-is10-p-mid-{type}", "MP+IS10-Mid"),
+        (f"mp-is10-p-hi-{type}", "MP+IS10-High"),
+        (f"mp-is100-p-low-{type}", "MP+IS100-Low"),
+        (f"mp-is100-p-mid-{type}", "MP+IS100-Mid"),
+        (f"mp-is100-p-hi-{type}", "MP+IS100-High"),
+        (f"mp-ps-p-low-{type}", "MP+PS-Low"),
+        (f"mp-ps-p-mid-{type}", "MP+PS-Mid"),
+        (f"mp-ps-p-hi-{type}", "MP+PS-High"),
+        (f"lnps-10-{type}", "LNPS-10"),
+        (f"lnps-30-{type}", "LNPS-30"),
+        (f"lnps-60-{type}", "LNPS-60"),
+        (f"ps-{type}", "PS"),
+    ]
+
+    df = df_raw.reset_index().rename(columns={"index": "Instance"})
+    df['Instance'] = df['Instance'].apply(os.path.basename)
+
+    plots = []
+    for col_name, label in obj_columns:
+        if col_name not in df.columns:
+            continue
+        tdf = df[["Instance", col_name]].sort_values(by=col_name)
+        tdf.insert(0, 'No', range(1, len(tdf) + 1))
+        #print(tdf)
+
+        g = hv.Scatter(tdf,
+                    vdims=[col_name, 'No', 'Instance'],
+                    kdims=['No'],
+                    label=col_name)
+        plots.append(hv.Curve(g))
+        plots.append(g)
+
+    if type == "obj":
+        ylabel = "Penalty Score (Lower is Better)"
+    elif type == "diff":
+        ylabel = "Modification Rate (% of changed shifts)"
+    elif type == "freq":
+        ylabel = "Frequency"
+
+    graph = hv.Overlay(plots).opts(
+        opts.Overlay(
+            width=1000, height=600,
+            ylabel=ylabel, xlabel='Instances',
+            legend_position='right',
+            show_legend=True,
+        ),
+        opts.Curve(
+            line_width=1,#0.5,
+            muted_alpha = 0.1,
+            show_legend=True,
+        ),
+        opts.Scatter(
+            tools=['hover'],
+            default_tools=['pan'],
+            show_legend=True,
+            marker=markers,
+            fill_alpha=0.0,
+            size=8,
+            line_width=1,#0.5,
+            muted_alpha = 0.0,
+            hooks=[hide_hover_icon],
+            hover_mode='vline',
+        ),
+    )
+    # Save plot
+    if output_file is not None:
+        output_path = f"{output_file.rsplit('.', 1)[0]}-{type}.html"
+        bokeh_output_file(output_path)
+        save(hv.render(graph))
+        print(f"Saved plot to {output_path}")
+    return graph
+
+def plot_all_holoviews_cactus(csv_file, output_file):
+    obj = plot_holoviews_cactus(csv_file, None, "obj")
+    diff = plot_holoviews_cactus(csv_file, None, "diff")
+    freq = plot_holoviews_cactus(csv_file, None, "freq")
+
+    layout = (obj + diff + freq).opts(sync_legends=True).cols(1)
+    if output_file is not None:
+        output_path = f"{output_file.rsplit('.', 1)[0]}.html"
+        bokeh_output_file(output_path)
+        save(hv.render(layout))
+        print(f"Saved plot to {output_path}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Plot a cactus plot from a CSV file using gnuplotlib.")
     parser.add_argument("csv_file", type=str, help="Path to the input CSV file")
     parser.add_argument("output_file", type=str, help="Path to save the output vector file (e.g., output.svg or output.pdf)")
     args = parser.parse_args()
 
-    plot_cactus(args.csv_file, args.output_file, "obj")
-    plot_cactus(args.csv_file, args.output_file, "diff")
-    plot_cactus(args.csv_file, args.output_file, "freq")
+    plot_matplotlib_cactus(args.csv_file, args.output_file, "obj")
+    plot_matplotlib_cactus(args.csv_file, args.output_file, "diff")
+    plot_matplotlib_cactus(args.csv_file, args.output_file, "freq")
+
+    plot_all_holoviews_cactus(args.csv_file, args.output_file)
 
 if __name__ == "__main__":
     main()
