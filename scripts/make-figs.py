@@ -128,7 +128,7 @@ def plot_matplotlib_cactus(csv_file, output_file, type):
         #plt.ylabel("Differences")
         plt.ylabel("Modification Rate (% of changed shifts)")
     elif type == "freq":
-        plt.ylabel("Frequency")
+        plt.ylabel("Solution Finding Frequency")
     if size <= 15:
         plt.legend(loc='upper left', handlelength=4)
     else:
