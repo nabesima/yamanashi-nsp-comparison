@@ -1,31 +1,56 @@
 # -*- mode: org; -*-
 
-#+OPTIONS: html-style:nil
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/search.css"/>
+#+MACRO: bgcolor @@html:<div style="background-color: $1;">$2</div>@@
 
-#+HTML_HEAD: <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-#+HTML_HEAD: <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
-#+HTML_HEAD: <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+#+MACRO: clearpage @@latex:\clearpage@@@@odt:<text:p text:style-name="PageBreak"/>@@
 
-#+MACRO: enable-search #+HTML_HEAD: <script type="text/javascript">enableSearch();</script>
-#+MACRO: disable-search #+HTML_HEAD: <script type="text/javascript">disableSearch();</script>
-#+MACRO: set-search-limit #+HTML_HEAD: <script type="text/javascript">setSearchLimit($1);</script>
+#+MACRO: color @@html:<span style="color: $1">$2</span>@@@@latex:\textcolor{$1}{$2}@@@@odt:<text:span text:style-name="$1">$2</text:span>@@
 
-* Search Configuration (v1.12)                                        :noexport:
+#+MACRO: fixme @@html:<span class="fixme">FIXME</span>@@
 
-Usage: Optionally place these macros after including this file, before your content.
+#+MACRO: highlight @@html:<span style="background-color: $1;">$2</span>@@
 
-- {{{enable-search}}} :: Enable search bar (default)
-- {{{disable-search}}} :: Disable search bar
-- {{{set-search-limit(N)}}} :: Limit results to N (default: 0 for no limit)
+#+MACRO: hl {{{highlight(#FFFF00,$1)}}}
 
-Example:
+#+MACRO: loremipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-#+begin_src org
-{{{enable-search}}}
-{{{set-search-limit(10)}}}
+#+MACRO: newline @@latex:\hspace{0pt}\\@@ @@html:<br>@@
+
+#+MACRO: kbd @@html:<kbd>@@$1@@html:</kbd>@@
+
+#+MACRO: dvipng-when-odt (eval (if (org-export-derived-backend-p org-export-current-backend 'odt) "#+OPTIONS: tex:dvipng" ))
+
+#+MACRO: if-latex-else (eval (if (org-export-derived-backend-p org-export-current-backend 'latex) "$1" "$2"))
+
+#+MACRO: style (eval (concat "#+HTML_HEAD_EXTRA: <style></style>"))
+
+#+MACRO: image \includegraphics{$1}
+
+#+name: version-history
+#+begin_src shell :exports none :results silent :colnames '(Version Date Author Comment)
+git log --pretty=format:"%h%x09%ad%x09%an%x09%s" --date=short | head -n 5
 #+end_src
+
+#+MACRO: version-history call_version-history[:eval yes]()[:eval yes :results table :colnames '(Version Date Author Comment)]
+
+#+MACRO: begin_info @@html:<div class="info"><p>@@
+#+MACRO: end_info @@html:</p></div>@@
+
+#+MACRO: BeginMiniPage @<div style="border:1px solid #aaaaaa;padding:10px;width:780px;margin-left:auto;margin-right:auto;">
+#+MACRO: EndMiniPage @</div>
+
+#+MACRO: begin_note @@html:<div class="note"><p>@@
+#+MACRO: end_note @@html:</p></div>@@
+
+#+MACRO: begin_panel @@html:<div class="panel"><p>@@
+#+MACRO: end_panel @@html:</p></div>@@
+
+#+MACRO: begin_tip @@html:<div class="tip"><p>@@
+#+MACRO: end_tip @@html:</p></div>@@
+
+#+MACRO: begin_warning @@html:<div class="warning"><p>@@
+#+MACRO: end_warning @@html:</p></div>@@
+
+#+MACRO: toc #+toc: headlines $1
+
+#+MACRO: twitter-share-link-button @@html:<script src="http://platform.twitter.com/widgets.js"></script><a href="https://twitter.com/share" class="twitter-share-button" data-via="$1">Tweet</a>@@

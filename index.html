@@ -3,20 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-03-20 木 23:22 -->
+<!-- 2025-03-20 木 23:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Detailed comparison results between LNPS and other strategies</title>
 <meta name="author" content="Hidetomo NABESHIMA, Mutsunori BANBARA, Torsten SCHAUB, Soh TAKEHIDE" />
 <meta name="generator" content="Org Mode" />
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
-<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/search.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
-<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
 <link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/search.css"/>
@@ -66,45 +58,18 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgb4ce77f">Search Configuration (v1.12)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="noexport">noexport</span></span></a></li>
-<li><a href="#org91b8ea5">Detailed Comparison Results</a>
+<li><a href="#org2263096">Detailed Comparison Results</a>
 <ul>
-<li><a href="#org281a691">Search Strategies</a></li>
+<li><a href="#org486fd20">Search Strategies</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgb4ce77f" class="outline-2">
-<h2 id="orgb4ce77f">Search Configuration (v1.12)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="noexport">noexport</span></span></h2>
-<div class="outline-text-2" id="text-orgb4ce77f">
-<p>
-Usage: Optionally place these macros after including this file, before your content.
-</p>
-
-<dl class="org-dl">
-<dt>#+HTML<sub>HEAD</sub>: &lt;script type="text/javascript"&gt;enableSearch();&lt;/script&gt;</dt><dd>Enable search bar (default)</dd>
-<dt>#+HTML<sub>HEAD</sub>: &lt;script type="text/javascript"&gt;disableSearch();&lt;/script&gt;</dt><dd>Disable search bar</dd>
-<dt>#+HTML<sub>HEAD</sub>: &lt;script type="text/javascript"&gt;setSearchLimit(N);&lt;/script&gt;</dt><dd>Limit results to N (default: 0 for no limit)</dd>
-</dl>
-
-<p>
-Example:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-org">{{{enable-search}}}
-{{{set-search-limit(10)}}}
-</pre>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-org91b8ea5" class="outline-2">
-<h2 id="org91b8ea5">Detailed Comparison Results</h2>
-<div class="outline-text-2" id="text-org91b8ea5">
+<div id="outline-container-org2263096" class="outline-2">
+<h2 id="org2263096">Detailed Comparison Results</h2>
+<div class="outline-text-2" id="text-org2263096">
 <p>
 This webpage provides supplementary materials for Section 5 Experiments of the
 paper <b>"The Magnificent ASP-based Nurse Scheduling System at the University of Yamanashi Hospital."</b>
@@ -112,9 +77,9 @@ paper <b>"The Magnificent ASP-based Nurse Scheduling System at the University of
 </div>
 
 
-<div id="outline-container-org281a691" class="outline-3">
-<h3 id="org281a691">Search Strategies</h3>
-<div class="outline-text-3" id="text-org281a691">
+<div id="outline-container-org486fd20" class="outline-3">
+<h3 id="org486fd20">Search Strategies</h3>
+<div class="outline-text-3" id="text-org486fd20">
 <p>
 In addition to the three strategies presented in the paper (LNPS, MP, MP-IS), we
 introduce two additional strategies, MP-PS and PS, making a total of five search
@@ -122,17 +87,13 @@ strategies for comparison.
 </p>
 
 <ul class="org-ul">
-<li><p>
-<b><b>LNPS</b></b> (Large Neighborhood Prioritized Search) [Sugimori et al. 2024]
-</p>
+<li><b><b>LNPS</b></b> (Large Neighborhood Prioritized Search) [Sugimori et al. 2024]
 <ul class="org-ul">
-<li>In our LNPS implementation, if no improved solution is found within a given</li>
-</ul>
-<p>
+<li>In our LNPS implementation, if no improved solution is found within a given
 time interval \(t\) (\(t \in \{10,30,60\}\)), the search is automatically
 restarted. Each configuration is denoted as LNPS-\(t\) based on the selected
-time threshold.
-</p></li>
+time threshold.</li>
+</ul></li>
 
 <li><b><b>MP</b></b> (Minimal Perturbation)
 <ul class="org-ul">
@@ -178,7 +139,7 @@ phases.</li>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Hidetomo NABESHIMA, Mutsunori BANBARA, Torsten SCHAUB, Soh TAKEHIDE</p>
-<p class="date">Created: 2025-03-20 木 23:22</p>
+<p class="date">Created: 2025-03-20 木 23:27</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

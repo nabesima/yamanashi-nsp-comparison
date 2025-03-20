@@ -6,7 +6,6 @@
 #+OPTIONS: num:nil
 #+EXCLUDE_TAGS: ignore
 
-
 * Detailed Comparison Results
 
 This webpage provides supplementary materials for Section 5 Experiments of the
@@ -21,9 +20,9 @@ strategies for comparison.
 
 - **LNPS** (Large Neighborhood Prioritized Search) [Sugimori et al. 2024]
   - In our LNPS implementation, if no improved solution is found within a given
-  time interval $t$ ($t \in \{10,30,60\}$), the search is automatically
-  restarted. Each configuration is denoted as LNPS-$t$ based on the selected
-  time threshold.
+    time interval $t$ ($t \in \{10,30,60\}$), the search is automatically
+    restarted. Each configuration is denoted as LNPS-$t$ based on the selected
+    time threshold.
 
 - **MP** (Minimal Perturbation)
   - This search strategy minimizes modifications to the initial solution by
