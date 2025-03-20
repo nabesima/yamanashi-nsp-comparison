@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-03-20 木 23:22 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Detailed comparison results between LNPS and other strategies</title>
+<meta name="author" content="Hidetomo NABESHIMA, Mutsunori BANBARA, Torsten SCHAUB, Soh TAKEHIDE" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/search.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="src/readtheorg_theme/css/search.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/search.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Detailed comparison results between LNPS and other strategies</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb4ce77f">Search Configuration (v1.12)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="noexport">noexport</span></span></a></li>
+<li><a href="#org91b8ea5">Detailed Comparison Results</a>
+<ul>
+<li><a href="#org281a691">Search Strategies</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb4ce77f" class="outline-2">
+<h2 id="orgb4ce77f">Search Configuration (v1.12)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="noexport">noexport</span></span></h2>
+<div class="outline-text-2" id="text-orgb4ce77f">
+<p>
+Usage: Optionally place these macros after including this file, before your content.
+</p>
+
+<dl class="org-dl">
+<dt>#+HTML<sub>HEAD</sub>: &lt;script type="text/javascript"&gt;enableSearch();&lt;/script&gt;</dt><dd>Enable search bar (default)</dd>
+<dt>#+HTML<sub>HEAD</sub>: &lt;script type="text/javascript"&gt;disableSearch();&lt;/script&gt;</dt><dd>Disable search bar</dd>
+<dt>#+HTML<sub>HEAD</sub>: &lt;script type="text/javascript"&gt;setSearchLimit(N);&lt;/script&gt;</dt><dd>Limit results to N (default: 0 for no limit)</dd>
+</dl>
+
+<p>
+Example:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org">{{{enable-search}}}
+{{{set-search-limit(10)}}}
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org91b8ea5" class="outline-2">
+<h2 id="org91b8ea5">Detailed Comparison Results</h2>
+<div class="outline-text-2" id="text-org91b8ea5">
+<p>
+This webpage provides supplementary materials for Section 5 Experiments of the
+paper <b>"The Magnificent ASP-based Nurse Scheduling System at the University of Yamanashi Hospital."</b>
+</p>
+</div>
+
+
+<div id="outline-container-org281a691" class="outline-3">
+<h3 id="org281a691">Search Strategies</h3>
+<div class="outline-text-3" id="text-org281a691">
+<p>
+In addition to the three strategies presented in the paper (LNPS, MP, MP-IS), we
+introduce two additional strategies, MP-PS and PS, making a total of five search
+strategies for comparison.
+</p>
+
+<ul class="org-ul">
+<li><p>
+<b><b>LNPS</b></b> (Large Neighborhood Prioritized Search) [Sugimori et al. 2024]
+</p>
+<ul class="org-ul">
+<li>In our LNPS implementation, if no improved solution is found within a given</li>
+</ul>
+<p>
+time interval \(t\) (\(t \in \{10,30,60\}\)), the search is automatically
+restarted. Each configuration is denoted as LNPS-\(t\) based on the selected
+time threshold.
+</p></li>
+
+<li><b><b>MP</b></b> (Minimal Perturbation)
+<ul class="org-ul">
+<li>This search strategy minimizes modifications to the initial solution by
+introducing a penalty term into the objective function.</li>
+<li>In this experiment, we set three priority levels for the objective function:
+highest, intermediate, and lowest, denoted as MP-High, MP-Mid, and MP-Low,
+respectively.</li>
+</ul></li>
+
+<li><b><b>MP-IS</b></b> (MP with Initial-value-based Search)
+<ul class="org-ul">
+<li>This search strategy extends MP by incorporating an initial-value-based
+search, where retained assignments from the initial solution guide the search.</li>
+<li>In the early stage of the search, to reproduce the assignments from the
+initial solution, we assign a larger-than-default value to the initial state
+of the variable selection heuristic VSIDS. We define three variations of
+this initial value: 1, 10, and 100, denoted as IS1, IS10, and IS100,
+respectively.</li>
+<li>Furthermore, similar to MP, we define three variations based on priority:
+MP-ISXX-High, MP-ISXX-Mid, and MP-ISXX-Low.</li>
+</ul></li>
+
+<li><b><b>MP-PS</b></b> (MP with Prioritized Search)
+<ul class="org-ul">
+<li>This search strategy extends MP by incorporating prioritized search. Similar
+to LNPS, it prioritizes the reproduction of retained assignments. As with
+MP, we define three variations: MP-PS-High, MP-PS-Mid, and MP-PS-Low.</li>
+<li>While MP-IS reproduces the assignments from the initial solution only in the
+early stage of the search, MP-PS maintains this throughout all search
+phases.</li>
+</ul></li>
+
+<li><b><b>PS</b></b> (Prioritized Search)
+<ul class="org-ul">
+<li>This search strategy is a variant of LNPS without automatic restarts.</li>
+<li>It is included to demonstrate the impact of automatic restarts.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Hidetomo NABESHIMA, Mutsunori BANBARA, Torsten SCHAUB, Soh TAKEHIDE</p>
+<p class="date">Created: 2025-03-20 木 23:22</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

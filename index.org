@@ -1,0 +1,57 @@
+#+TITLE: Detailed comparison results between LNPS and other strategies
+#+AUTHOR: Hidetomo NABESHIMA, Mutsunori BANBARA, Torsten SCHAUB, Soh TAKEHIDE
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+INCLUDE: org-macros.setup
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+#+OPTIONS: num:nil
+#+EXCLUDE_TAGS: ignore
+
+
+* Detailed Comparison Results
+
+This webpage provides supplementary materials for Section 5 Experiments of the
+paper *"The Magnificent ASP-based Nurse Scheduling System at the University of Yamanashi Hospital."*
+
+
+** Search Strategies
+
+In addition to the three strategies presented in the paper (LNPS, MP, MP-IS), we
+introduce two additional strategies, MP-PS and PS, making a total of five search
+strategies for comparison.
+
+- **LNPS** (Large Neighborhood Prioritized Search) [Sugimori et al. 2024]
+  - In our LNPS implementation, if no improved solution is found within a given
+  time interval $t$ ($t \in \{10,30,60\}$), the search is automatically
+  restarted. Each configuration is denoted as LNPS-$t$ based on the selected
+  time threshold.
+
+- **MP** (Minimal Perturbation)
+  - This search strategy minimizes modifications to the initial solution by
+    introducing a penalty term into the objective function.
+  - In this experiment, we set three priority levels for the objective function:
+    highest, intermediate, and lowest, denoted as MP-High, MP-Mid, and MP-Low,
+    respectively.
+
+- **MP-IS** (MP with Initial-value-based Search)
+  - This search strategy extends MP by incorporating an initial-value-based
+    search, where retained assignments from the initial solution guide the search.
+  - In the early stage of the search, to reproduce the assignments from the
+    initial solution, we assign a larger-than-default value to the initial state
+    of the variable selection heuristic VSIDS. We define three variations of
+    this initial value: 1, 10, and 100, denoted as IS1, IS10, and IS100,
+    respectively.
+  - Furthermore, similar to MP, we define three variations based on priority:
+    MP-ISXX-High, MP-ISXX-Mid, and MP-ISXX-Low.
+
+- **MP-PS** (MP with Prioritized Search)
+  - This search strategy extends MP by incorporating prioritized search. Similar
+    to LNPS, it prioritizes the reproduction of retained assignments. As with
+    MP, we define three variations: MP-PS-High, MP-PS-Mid, and MP-PS-Low.
+  - While MP-IS reproduces the assignments from the initial solution only in the
+    early stage of the search, MP-PS maintains this throughout all search
+    phases.
+
+- **PS** (Prioritized Search)
+  - This search strategy is a variant of LNPS without automatic restarts.
+  - It is included to demonstrate the impact of automatic restarts.
+
