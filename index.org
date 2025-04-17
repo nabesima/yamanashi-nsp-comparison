@@ -1,4 +1,4 @@
-#+TITLE: Detailed comparison results between LNPS and other strategies
+#+TITLE: Detailed Comparison Results between LNPS and Other Strategies
 #+AUTHOR: Hidetomo NABESHIMA, Mutsunori BANBARA, Torsten SCHAUB, Soh TAKEHIDE
 #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
 #+INCLUDE: org-macros.setup
@@ -6,11 +6,12 @@
 #+OPTIONS: num:nil
 #+EXCLUDE_TAGS: ignore
 
-* Detailed Comparison Results
+* Overview
 
-This webpage provides supplementary materials for Section 5 Experiments of the
-paper *"The Magnificent ASP-based Nurse Scheduling System at the University of Yamanashi Hospital."*
+This webpage provides supplementary materials for Section 4 (Experiments) of the
+paper
 
+: H. Nabeshima, M. Banbara, T. Schaub, and T. Soh: The Magnificent ASP-based Nurse Scheduling System at the University of Yamanashi Hospital, submitted to ICLP 2025.
 
 ** Search Strategies
 
