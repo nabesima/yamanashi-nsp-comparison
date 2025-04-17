@@ -286,7 +286,7 @@ retained*) are included in the results presented in the paper.
 
 ** First Half Retained, Second Half Reconstructed
 *** Comparison of All Search Strategies
-**** Aggregated (1st + 2nd + 3rd runs)
+**** All (1st + 2nd + 3rd runs)
 - [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-60.html][Results with 60-second time limit]]
 - [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-600.html][Results with 600-second time limit]]
 - [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-3600.html][Results with 3600-second time limit]]
@@ -304,7 +304,7 @@ retained*) are included in the results presented in the paper.
 - [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-3600.html][Results with 3600-second time limit]]
 
 *** Comparison of Search Strategies **LNPS**, **MP**, and **MP-IS** (as presented in the paper)
-**** Aggregated (1st + 2nd + 3rd runs)
+**** All (1st + 2nd + 3rd runs)
 - [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-60-paper.html][Results with 60-second time limit]]
 - [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-600-paper.html][Results with 600-second time limit]]
 - [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-3600-paper.html][Results with 3600-second time limit]]
@@ -322,7 +322,7 @@ retained*) are included in the results presented in the paper.
 - [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-3600-paper.html][Results with 3600-second time limit]]
 
 *** Comparison of Search Strategies **MP-IS1**, **MP-IS10**, and **MP-IS100**
-**** Aggregated (1st + 2nd + 3rd runs)
+**** All (1st + 2nd + 3rd runs)
 - [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-60-mp-is.html][Results with 60-second time limit]]
 - [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-600-mp-is.html][Results with 600-second time limit]]
 - [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-3600-mp-is.html][Results with 3600-second time limit]]
@@ -340,7 +340,7 @@ retained*) are included in the results presented in the paper.
 - [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-3600-mp-is.html][Results with 3600-second time limit]]
 
 *** Comparison of Search Strategy **MP-PS**
-**** Aggregated (1st + 2nd + 3rd runs)
+**** All (1st + 2nd + 3rd runs)
 - [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-60-mp-ps.html][Results with 60-second time limit]]
 - [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-600-mp-ps.html][Results with 600-second time limit]]
 - [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-3600-mp-ps.html][Results with 3600-second time limit]]
@@ -358,7 +358,7 @@ retained*) are included in the results presented in the paper.
 - [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-3600-mp-ps.html][Results with 3600-second time limit]]
 
 *** Comparison of Search Strategy **PS**
-**** Aggregated (1st + 2nd + 3rd runs)
+**** All (1st + 2nd + 3rd runs)
 - [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-60-ps.html][Results with 60-second time limit]]
 - [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-600-ps.html][Results with 600-second time limit]]
 - [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-3600-ps.html][Results with 3600-second time limit]]

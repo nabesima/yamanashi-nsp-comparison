@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import argparse
 import os
+import re
 import pandas as pd
 import matplotlib.pyplot as plt
 import holoviews as hv
@@ -257,6 +258,88 @@ def plot_all_holoviews_cactus(csv_file, output_file, muted_labels=[]):
         bokeh_output_file(output_path)
         save(hv.render(layout))
         print(f"Saved plot to {output_path}")
+        title = generate_title(csv_file)
+        if title:
+            inject_html_header(output_path, title, title)
+
+def inject_html_header(output_path, page_title="Cactus Plot", heading_text="Cactus Plot Overview"):
+    """
+    Inserts a <title> tag and an <h1> header into the generated HTML file.
+
+    This function is intended to be used after a Bokeh or HoloViews plot has been saved as an HTML file.
+    It updates the <head> section to include a <title> tag and injects an <h1> heading at the top of the <body>.
+
+    Parameters:
+        output_path (str): Path to the generated HTML file.
+        page_title (str): Text to be inserted in the <title> tag (browser tab title).
+        heading_text (str): Text to be displayed as a heading at the top of the page.
+    """
+    with open(output_path, "r+", encoding="utf-8") as f:
+        html = f.read()
+        f.seek(0)
+
+        # Insert or replace <title> in the <head> section
+        if "<title>" in html:
+            html = re.sub(r"<title>.*?</title>", f"<title>{page_title}</title>", html)
+        else:
+            html = html.replace(
+                "<head>",
+                f"<head>\n<title>{page_title}</title>"
+            )
+
+        # Insert <h1> heading at the top of <body>
+        html = html.replace(
+            "<body>",
+            f"<body>\n<h1 style='font-family:sans-serif'>{heading_text}</h1>"
+        )
+
+        f.write(html)
+        f.truncate()
+
+import re
+
+retcon_title_templates = {
+    (None, "28"): "Entire set reconstructed",
+    ("7", "21"): "First week retained, remaining three weeks reconstructed",
+    ("14", "14"): "First half retained, second half reconstructed",
+    ("21", "7"): "First three weeks retained, final week reconstructed",
+    ("28", None): "Entire set retained",
+}
+
+def generate_title(filepath):
+    """
+    Generate a natural language title from a resolved-*.csv file path.
+
+    Returns:
+        str | None: A human-readable title, or None for 'paper' runs.
+    """
+    pattern = re.compile(
+        r"resolved-(?:(p(?P<p>\d+)d)-)?(?:(c(?P<c>\d+)d)-)?(?P<base>\d+)(?:-(?P<run>1st|2nd|3rd|all|paper))?/results(?P<timeout>\d+)\.csv"
+    )
+    m = pattern.match(filepath)
+    if not m:
+        return None
+
+    p_days = m.group("p")
+    c_days = m.group("c")
+    run_tag = m.group("run") or "paper"
+    results_timeout = int(m.group("timeout"))
+
+    # paper → title is None
+    if run_tag == "paper":
+        return None
+
+    # Get natural language description of the scheduling scenario
+    title_key = (p_days, c_days)
+    description = retcon_title_templates.get(title_key, f"Schedule: p{p_days}d-c{c_days}d")
+
+    # Add suffix depending on run type
+    if run_tag == "all":
+        run_desc = "Aggregated result of 1st, 2nd, and 3rd runs"
+    else:
+        run_desc = f"{run_tag} run"
+
+    return f"{description} (timeout: {results_timeout}s, {run_desc})"
 
 def main():
     parser = argparse.ArgumentParser(description="Plot a cactus plot from a CSV file using gnuplotlib.")
