@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-04-17 木 13:21 -->
+<!-- 2025-04-17 木 18:41 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Detailed Comparison Results between LNPS and Other Strategies</title>
@@ -58,19 +58,65 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org23c3e25">Overview</a>
+<li><a href="#org8b99ff5">Overview</a></li>
+<li><a href="#orgfe60c6b">Search Strategies</a></li>
+<li><a href="#orgdaf6698">Experimental Instance Settings</a></li>
+<li><a href="#orged4d1cc">Schedule Modification Scenarios</a></li>
+<li><a href="#orgdf9d1f5">Experimental Results</a>
 <ul>
-<li><a href="#org6e32e6e">Search Strategies</a></li>
-<li><a href="#orgf4ef4d5">Results</a></li>
+<li><a href="#org3955417">Entire set reconstructed</a>
+<ul>
+<li><a href="#orgd356775">Comparison of all search strategies</a></li>
+<li><a href="#org54e8479">Comparison of search strategies <b><b>LNPS</b></b>, <b><b>MP</b></b>, and <b><b>MP-IS</b></b> (presented in the paper)</a></li>
+<li><a href="#org326f39f">Comparison of search strategies <b><b>MP-IS1</b></b>, <b><b>MP-IS10</b></b>, and <b><b>MP-IS100</b></b></a></li>
+<li><a href="#org0a1ed6b">Comparison of search strategy <b><b>MP-PS</b></b></a></li>
+<li><a href="#org892f2a8">Comparison of search strategy <b><b>PS</b></b></a></li>
+</ul>
+</li>
+<li><a href="#org88c2246">First week retained, remaining three weeks reconstructed</a>
+<ul>
+<li><a href="#org857c8bb">Comparison of all search strategies</a></li>
+<li><a href="#orga586cd4">Comparison of search strategies <b><b>LNPS</b></b>, <b><b>MP</b></b>, and <b><b>MP-IS</b></b> (presented in the paper)</a></li>
+<li><a href="#org868fb2d">Comparison of search strategies <b><b>MP-IS1</b></b>, <b><b>MP-IS10</b></b>, and <b><b>MP-IS100</b></b></a></li>
+<li><a href="#org032dafe">Comparison of search strategy <b><b>MP-PS</b></b></a></li>
+<li><a href="#orgd9cde77">Comparison of search strategy <b><b>PS</b></b></a></li>
+</ul>
+</li>
+<li><a href="#org8a5dffb">First Half Retained, Second Half Reconstructed</a>
+<ul>
+<li><a href="#org9787f91">Comparison of All Search Strategies</a></li>
+<li><a href="#org61d4f31">Comparison of Search Strategies <b><b>LNPS</b></b>, <b><b>MP</b></b>, and <b><b>MP-IS</b></b> (as presented in the paper)</a></li>
+<li><a href="#org58a3f7b">Comparison of Search Strategies <b><b>MP-IS1</b></b>, <b><b>MP-IS10</b></b>, and <b><b>MP-IS100</b></b></a></li>
+<li><a href="#orga7a9404">Comparison of Search Strategy <b><b>MP-PS</b></b></a></li>
+<li><a href="#orgd42eb35">Comparison of Search Strategy <b><b>PS</b></b></a></li>
+</ul>
+</li>
+<li><a href="#orgf242fe8">First three weeks retained, final week reconstructed</a>
+<ul>
+<li><a href="#org81c7297">Comparison of all search strategies</a></li>
+<li><a href="#org9b06abe">Comparison of search strategies <b><b>LNPS</b></b>, <b><b>MP</b></b>, and <b><b>MP-IS</b></b> (presented in the paper)</a></li>
+<li><a href="#orgf7ae5f9">Comparison of search strategies <b><b>MP-IS1</b></b>, <b><b>MP-IS10</b></b>, and <b><b>MP-IS100</b></b></a></li>
+<li><a href="#orgf565c97">Comparison of search strategy <b><b>MP-PS</b></b></a></li>
+</ul>
+</li>
+<li><a href="#org6ca738a">Entire set retained</a>
+<ul>
+<li><a href="#orgab03b5f">Comparison of all search strategies</a></li>
+<li><a href="#org79d918f">Comparison of search strategies <b><b>LNPS</b></b>, <b><b>MP</b></b>, and <b><b>MP-IS</b></b> (presented in the paper)</a></li>
+<li><a href="#org47984da">Comparison of search strategies <b><b>MP-IS1</b></b>, <b><b>MP-IS10</b></b>, and <b><b>MP-IS100</b></b></a></li>
+<li><a href="#orge654ff8">Comparison of search strategy <b><b>MP-PS</b></b></a></li>
+<li><a href="#org5667bac">Comparison of search strategy <b><b>PS</b></b></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org23c3e25" class="outline-2">
-<h2 id="org23c3e25">Overview</h2>
-<div class="outline-text-2" id="text-org23c3e25">
+<div id="outline-container-org8b99ff5" class="outline-2">
+<h2 id="org8b99ff5">Overview</h2>
+<div class="outline-text-2" id="text-org8b99ff5">
 <p>
 This webpage provides supplementary materials for Section 4 (Experiments) of the
 paper:
@@ -80,14 +126,15 @@ paper:
 H. Nabeshima, M. Banbara, T. Schaub, and T. Soh: The Magnificent ASP-based Nurse Scheduling System at the University of Yamanashi Hospital, submitted to ICLP 2025.
 </pre>
 </div>
+</div>
 
-<div id="outline-container-org6e32e6e" class="outline-3">
-<h3 id="org6e32e6e">Search Strategies</h3>
-<div class="outline-text-3" id="text-org6e32e6e">
+<div id="outline-container-orgfe60c6b" class="outline-2">
+<h2 id="orgfe60c6b">Search Strategies</h2>
+<div class="outline-text-2" id="text-orgfe60c6b">
 <p>
-In addition to the three strategies presented in the paper (LNPS, MP, MP-IS), we
-introduce two additional strategies, MP-PS and PS, making a total of five search
-strategies for comparison.
+In addition to the three strategies presented in the paper (<b><b>LNPS</b></b>, <b><b>MP</b></b>,
+<b><b>MP-IS</b></b>), we introduce two additional strategies, <b><b>MP-PS</b></b> and <b><b>PS</b></b>, making
+a total of five search strategies for comparison.
 </p>
 
 <ul class="org-ul">
@@ -140,90 +187,1157 @@ phases.</li>
 </div>
 </div>
 
-<div id="outline-container-orgf4ef4d5" class="outline-3">
-<h3 id="orgf4ef4d5">Results</h3>
-<div class="outline-text-3" id="text-orgf4ef4d5">
+<div id="outline-container-orgdaf6698" class="outline-2">
+<h2 id="orgdaf6698">Experimental Instance Settings</h2>
+<div class="outline-text-2" id="text-orgdaf6698">
 <p>
-
-<a href="resolved-c28d-3600-1st/fig-c28d-3600.html">fig-c28d-3600</a>
-<a href="resolved-c28d-3600-1st/fig-c28d-600.html">fig-c28d-600</a>
-<a href="resolved-c28d-3600-2nd/fig-c28d-60.html">fig-c28d-60</a>
-<a href="resolved-c28d-3600-2nd/fig-c28d-3600.html">fig-c28d-3600</a>
-<a href="resolved-c28d-3600-2nd/fig-c28d-600.html">fig-c28d-600</a>
-<a href="resolved-c28d-3600-3rd/fig-c28d-60.html">fig-c28d-60</a>
-<a href="resolved-c28d-3600-3rd/fig-c28d-3600.html">fig-c28d-3600</a>
-<a href="resolved-c28d-3600-3rd/fig-c28d-600.html">fig-c28d-600</a>
-<a href="resolved-c28d-comp-is/fig-c28d-comp-is-3600.html">fig-c28d-comp-is-3600</a>
-<a href="resolved-c28d-comp-is/fig-c28d-comp-is-60.html">fig-c28d-comp-is-60</a>
-<a href="resolved-c28d-comp-is/fig-c28d-comp-is-600.html">fig-c28d-comp-is-600</a>
-<a href="resolved-c28d-comp-ps/fig-c28d-comp-ps-600.html">fig-c28d-comp-ps-600</a>
-<a href="resolved-c28d-comp-ps/fig-c28d-comp-ps-3600.html">fig-c28d-comp-ps-3600</a>
-<a href="resolved-c28d-comp-ps/fig-c28d-comp-ps-60.html">fig-c28d-comp-ps-60</a>
-<a href="resolved-c28d-paper/fig-c28d-paper-60.html">fig-c28d-paper-60</a>
-<a href="resolved-c28d-paper/fig-c28d-paper-600.html">fig-c28d-paper-600</a>
-<a href="resolved-c28d-paper/fig-c28d-paper-3600.html">fig-c28d-paper-3600</a>
-<a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-3600.html">fig-p7d-c21d-3600</a>
-<a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-60.html">fig-p7d-c21d-60</a>
-<a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-600.html">fig-p7d-c21d-600</a>
-<a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-3600.html">fig-p7d-c21d-3600</a>
-<a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-60.html">fig-p7d-c21d-60</a>
-<a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-600.html">fig-p7d-c21d-600</a>
-<a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-3600.html">fig-p7d-c21d-3600</a>
-<a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-60.html">fig-p7d-c21d-60</a>
-<a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-600.html">fig-p7d-c21d-600</a>
-<a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-3600.html">fig-p14d-c14d-3600</a>
-<a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-600.html">fig-p14d-c14d-600</a>
-<a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-60.html">fig-p14d-c14d-60</a>
-<a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-3600.html">fig-p14d-c14d-3600</a>
-<a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-600.html">fig-p14d-c14d-600</a>
-<a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-60.html">fig-p14d-c14d-60</a>
-<a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-3600.html">fig-p14d-c14d-3600</a>
-<a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-600.html">fig-p14d-c14d-600</a>
-<a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-60.html">fig-p14d-c14d-60</a>
-<a href="resolved-p14d-c14d-comp-is/fig-p14d-c14d-comp-is-600.html">fig-p14d-c14d-comp-is-600</a>
-<a href="resolved-p14d-c14d-comp-is/fig-p14d-c14d-comp-is-60.html">fig-p14d-c14d-comp-is-60</a>
-<a href="resolved-p14d-c14d-comp-is/fig-p14d-c14d-comp-is-3600.html">fig-p14d-c14d-comp-is-3600</a>
-<a href="resolved-p14d-c14d-comp-ps/fig-p14d-c14d-comp-ps-600.html">fig-p14d-c14d-comp-ps-600</a>
-<a href="resolved-p14d-c14d-comp-ps/fig-p14d-c14d-comp-ps-3600.html">fig-p14d-c14d-comp-ps-3600</a>
-<a href="resolved-p14d-c14d-comp-ps/fig-p14d-c14d-comp-ps-60.html">fig-p14d-c14d-comp-ps-60</a>
-<a href="resolved-p14d-c14d-paper/fig-p14d-c14d-paper-600.html">fig-p14d-c14d-paper-600</a>
-<a href="resolved-p14d-c14d-paper/fig-p14d-c14d-paper-60.html">fig-p14d-c14d-paper-60</a>
-<a href="resolved-p14d-c14d-paper/fig-p14d-c14d-paper-3600.html">fig-p14d-c14d-paper-3600</a>
-<a href="resolved-p21d-c7d-3600-1st/fig-p21d-c7d-3600.html">fig-p21d-c7d-3600</a>
-<a href="resolved-p21d-c7d-3600-1st/fig-p21d-c7d-600.html">fig-p21d-c7d-600</a>
-<a href="resolved-p21d-c7d-3600-1st/fig-p21d-c7d-60.html">fig-p21d-c7d-60</a>
-<a href="resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-3600.html">fig-p21d-c7d-3600</a>
-<a href="resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-600.html">fig-p21d-c7d-600</a>
-<a href="resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-60.html">fig-p21d-c7d-60</a>
-<a href="resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-3600.html">fig-p21d-c7d-3600</a>
-<a href="resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-600.html">fig-p21d-c7d-600</a>
-<a href="resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-60.html">fig-p21d-c7d-60</a>
-<a href="resolved-p28d-3600-1st/fig-p28d-600.html">fig-p28d-600</a>
-<a href="resolved-p28d-3600-1st/fig-p28d-3600.html">fig-p28d-3600</a>
-<a href="resolved-p28d-3600-1st/fig-p28d-60.html">fig-p28d-60</a>
-<a href="resolved-p28d-3600-2nd/fig-p28d-600.html">fig-p28d-600</a>
-<a href="resolved-p28d-3600-2nd/fig-p28d-3600.html">fig-p28d-3600</a>
-<a href="resolved-p28d-3600-2nd/fig-p28d-60.html">fig-p28d-60</a>
-<a href="resolved-p28d-3600-3rd/fig-p28d-600.html">fig-p28d-600</a>
-<a href="resolved-p28d-3600-3rd/fig-p28d-3600.html">fig-p28d-3600</a>
-<a href="resolved-p28d-3600-3rd/fig-p28d-60.html">fig-p28d-60</a>
-<a href="resolved-p28d-comp-is/fig-p28d-comp-is-600.html">fig-p28d-comp-is-600</a>
-<a href="resolved-p28d-comp-is/fig-p28d-comp-is-3600.html">fig-p28d-comp-is-3600</a>
-<a href="resolved-p28d-comp-is/fig-p28d-comp-is-60.html">fig-p28d-comp-is-60</a>
-<a href="resolved-p28d-comp-ps/fig-p28d-comp-ps-600.html">fig-p28d-comp-ps-600</a>
-<a href="resolved-p28d-comp-ps/fig-p28d-comp-ps-3600.html">fig-p28d-comp-ps-3600</a>
-<a href="resolved-p28d-comp-ps/fig-p28d-comp-ps-60.html">fig-p28d-comp-ps-60</a>
-<a href="resolved-p28d-paper/fig-p28d-paper-600.html">fig-p28d-paper-600</a>
-<a href="resolved-p28d-paper/fig-p28d-paper-60.html">fig-p28d-paper-60</a>
-<a href="resolved-p28d-paper/fig-p28d-paper-3600.html">fig-p28d-paper-3600</a>
+We evaluated our system using 50 benchmark instances simulating a typical nurse
+scheduling problem (NSP) at our hospital. Each instance spans a 28-day
+scheduling period with one of five nurse counts: 10, 20, 30, 40, or 50. For each
+setting, 10 instances were generated with different random seeds.
 </p>
+
+<p>
+The objective function adopts a four-tier priority structure:
+</p>
+<ol class="org-ol">
+<li><b>Staff preferences</b></li>
+<li><b>Inter-shift constraints</b> (to avoid invalid shift sequences)</li>
+<li><b>Daily staffing and shift frequency constraints</b></li>
+<li><b>Remaining soft constraints</b> with the lowest priority</li>
+</ol>
+
+<p>
+Requested shifts—both preferred and undesired—are embedded in 10% of schedule
+cells and treated as <b>hard constraints</b>. Due to this, 60% of the instances are
+initially <b>unsatisfiable</b> and require relaxation. In such cases, requested
+shifts are softened with higher priority than ordinary soft constraints, while
+preserving the original hierarchical structure.
+</p>
+
+<p>
+All instance data and the generation script are available in this repository.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orged4d1cc" class="outline-2">
+<h2 id="orged4d1cc">Schedule Modification Scenarios</h2>
+<div class="outline-text-2" id="text-orged4d1cc">
+<p>
+To evaluate schedule reconstruction strategies, an initial solution for each
+instance was generated within a one-hour time limit. Then, an additional 5% of
+requested shifts were added, and evaluation was conducted under the following
+five modification scenarios:
+</p>
+
+<ol class="org-ol">
+<li><b>Entire set reconstructed</b>: The initial solution is completely discarded, and
+a new schedule is generated from scratch. This serves as a baseline for
+comparing search strategies without relying on prior assignments.</li>
+
+<li><b>First week retained, remaining three weeks reconstructed</b>: Only the first 7
+days of the initial schedule are retained, and the remaining 21 days are
+reconstructed.</li>
+
+<li><b>First half retained, second half reconstructed</b>: The first 14 days are
+retained, and only the remaining 14 days are reconstructed.</li>
+
+<li><b>First three weeks retained, final week reconstructed</b>: The first 21 days are
+retained, and only the final 7 days are reconstructed.</li>
+
+<li><b>Entire set retained</b>: The entire initial schedule is retained.</li>
+</ol>
+
+<p>
+In scenarios 2–5, the added requested shifts may also appear in the retained
+portions, potentially causing constraint violations that must be resolved to
+ensure feasibility.
+</p>
+
+<p>
+<b>Note:</b> Among these scenarios, only scenarios 1 (<b>entire set reconstructed</b>), 3
+(<b>first half retained, second half reconstructed</b>), and 5 (<b>entire set
+retained</b>) are included in the results presented in the paper.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgdf9d1f5" class="outline-2">
+<h2 id="orgdf9d1f5">Experimental Results</h2>
+<div class="outline-text-2" id="text-orgdf9d1f5">
+</div>
+<div id="outline-container-org3955417" class="outline-3">
+<h3 id="org3955417">Entire set reconstructed</h3>
+<div class="outline-text-3" id="text-org3955417">
+</div>
+<div id="outline-container-orgd356775" class="outline-4">
+<h4 id="orgd356775">Comparison of all search strategies</h4>
+<div class="outline-text-4" id="text-orgd356775">
+</div>
+<ul class="org-ul">
+<li><a id="org25aca3b"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-org25aca3b">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-all/fig-c28d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-all/fig-c28d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-all/fig-c28d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga5739e5"></a>1st Run<br />
+<div class="outline-text-5" id="text-orga5739e5">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-1st/fig-c28d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-1st/fig-c28d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-1st/fig-c28d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5a509f7"></a>2nd Run<br />
+<div class="outline-text-5" id="text-org5a509f7">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-2nd/fig-c28d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-2nd/fig-c28d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-2nd/fig-c28d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org66e3eae"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org66e3eae">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-3rd/fig-c28d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-3rd/fig-c28d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-3rd/fig-c28d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org54e8479" class="outline-4">
+<h4 id="org54e8479">Comparison of search strategies <b><b>LNPS</b></b>, <b><b>MP</b></b>, and <b><b>MP-IS</b></b> (presented in the paper)</h4>
+<div class="outline-text-4" id="text-org54e8479">
+</div>
+<ul class="org-ul">
+<li><a id="org4ee2be9"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-org4ee2be9">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-all/fig-c28d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-all/fig-c28d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-all/fig-c28d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2e692a5"></a>1st Run<br />
+<div class="outline-text-5" id="text-org2e692a5">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-1st/fig-c28d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-1st/fig-c28d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-1st/fig-c28d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org32da645"></a>2nd Run<br />
+<div class="outline-text-5" id="text-org32da645">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-2nd/fig-c28d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-2nd/fig-c28d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-2nd/fig-c28d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5fce3be"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org5fce3be">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-3rd/fig-c28d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-3rd/fig-c28d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-3rd/fig-c28d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org326f39f" class="outline-4">
+<h4 id="org326f39f">Comparison of search strategies <b><b>MP-IS1</b></b>, <b><b>MP-IS10</b></b>, and <b><b>MP-IS100</b></b></h4>
+<div class="outline-text-4" id="text-org326f39f">
+</div>
+<ul class="org-ul">
+<li><a id="org9a6c685"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-org9a6c685">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-all/fig-c28d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-all/fig-c28d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-all/fig-c28d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5ab8434"></a>1st Run<br />
+<div class="outline-text-5" id="text-org5ab8434">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-1st/fig-c28d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-1st/fig-c28d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-1st/fig-c28d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org191091b"></a>2nd Run<br />
+<div class="outline-text-5" id="text-org191091b">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-2nd/fig-c28d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-2nd/fig-c28d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-2nd/fig-c28d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org57365f6"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org57365f6">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-3rd/fig-c28d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-3rd/fig-c28d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-3rd/fig-c28d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org0a1ed6b" class="outline-4">
+<h4 id="org0a1ed6b">Comparison of search strategy <b><b>MP-PS</b></b></h4>
+<div class="outline-text-4" id="text-org0a1ed6b">
+</div>
+<ul class="org-ul">
+<li><a id="org41a09bc"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-org41a09bc">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-all/fig-c28d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-all/fig-c28d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-all/fig-c28d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3e10a48"></a>1st Run<br />
+<div class="outline-text-5" id="text-org3e10a48">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-1st/fig-c28d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-1st/fig-c28d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-1st/fig-c28d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgbf2b0c8"></a>2nd Run<br />
+<div class="outline-text-5" id="text-orgbf2b0c8">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-2nd/fig-c28d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-2nd/fig-c28d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-2nd/fig-c28d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org700aca4"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org700aca4">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-3rd/fig-c28d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-3rd/fig-c28d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-3rd/fig-c28d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org892f2a8" class="outline-4">
+<h4 id="org892f2a8">Comparison of search strategy <b><b>PS</b></b></h4>
+<div class="outline-text-4" id="text-org892f2a8">
+</div>
+<ul class="org-ul">
+<li><a id="orgc2d20fc"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-orgc2d20fc">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-all/fig-c28d-60-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-all/fig-c28d-600-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-all/fig-c28d-3600-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org84f0419"></a>1st Run<br />
+<div class="outline-text-5" id="text-org84f0419">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-1st/fig-c28d-60-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-1st/fig-c28d-600-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-1st/fig-c28d-3600-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgacf6738"></a>2nd Run<br />
+<div class="outline-text-5" id="text-orgacf6738">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-2nd/fig-c28d-60-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-2nd/fig-c28d-600-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-2nd/fig-c28d-3600-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5a1e9c2"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org5a1e9c2">
+<ul class="org-ul">
+<li><a href="resolved-c28d-3600-3rd/fig-c28d-60-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-c28d-3600-3rd/fig-c28d-600-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-c28d-3600-3rd/fig-c28d-3600-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org88c2246" class="outline-3">
+<h3 id="org88c2246">First week retained, remaining three weeks reconstructed</h3>
+<div class="outline-text-3" id="text-org88c2246">
+</div>
+<div id="outline-container-org857c8bb" class="outline-4">
+<h4 id="org857c8bb">Comparison of all search strategies</h4>
+<div class="outline-text-4" id="text-org857c8bb">
+</div>
+<ul class="org-ul">
+<li><a id="orgef08cb1"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-orgef08cb1">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-all/fig-p7d-c21d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-all/fig-p7d-c21d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-all/fig-p7d-c21d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3616301"></a>1st Run<br />
+<div class="outline-text-5" id="text-org3616301">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf2449be"></a>2nd Run<br />
+<div class="outline-text-5" id="text-orgf2449be">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org7d9381e"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org7d9381e">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orga586cd4" class="outline-4">
+<h4 id="orga586cd4">Comparison of search strategies <b><b>LNPS</b></b>, <b><b>MP</b></b>, and <b><b>MP-IS</b></b> (presented in the paper)</h4>
+<div class="outline-text-4" id="text-orga586cd4">
+</div>
+<ul class="org-ul">
+<li><a id="org566fcbb"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-org566fcbb">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-all/fig-p7d-c21d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-all/fig-p7d-c21d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-all/fig-p7d-c21d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org1a41297"></a>1st Run<br />
+<div class="outline-text-5" id="text-org1a41297">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgf9eea16"></a>2nd Run<br />
+<div class="outline-text-5" id="text-orgf9eea16">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org4e34a7a"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org4e34a7a">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org868fb2d" class="outline-4">
+<h4 id="org868fb2d">Comparison of search strategies <b><b>MP-IS1</b></b>, <b><b>MP-IS10</b></b>, and <b><b>MP-IS100</b></b></h4>
+<div class="outline-text-4" id="text-org868fb2d">
+</div>
+<ul class="org-ul">
+<li><a id="orga0919a8"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-orga0919a8">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-all/fig-p7d-c21d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-all/fig-p7d-c21d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-all/fig-p7d-c21d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org653a980"></a>1st Run<br />
+<div class="outline-text-5" id="text-org653a980">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9af5ecc"></a>2nd Run<br />
+<div class="outline-text-5" id="text-org9af5ecc">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9ce9b5b"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org9ce9b5b">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org032dafe" class="outline-4">
+<h4 id="org032dafe">Comparison of search strategy <b><b>MP-PS</b></b></h4>
+<div class="outline-text-4" id="text-org032dafe">
+</div>
+<ul class="org-ul">
+<li><a id="org1ddef76"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-org1ddef76">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-all/fig-p7d-c21d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-all/fig-p7d-c21d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-all/fig-p7d-c21d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb70b51e"></a>1st Run<br />
+<div class="outline-text-5" id="text-orgb70b51e">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge0ac920"></a>2nd Run<br />
+<div class="outline-text-5" id="text-orge0ac920">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org14c4c4a"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org14c4c4a">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgd9cde77" class="outline-4">
+<h4 id="orgd9cde77">Comparison of search strategy <b><b>PS</b></b></h4>
+<div class="outline-text-4" id="text-orgd9cde77">
+</div>
+<ul class="org-ul">
+<li><a id="org6c1a2b6"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-org6c1a2b6">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-all/fig-p7d-c21d-60-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-all/fig-p7d-c21d-600-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-all/fig-p7d-c21d-3600-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org202f9a3"></a>1st Run<br />
+<div class="outline-text-5" id="text-org202f9a3">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-60-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-600-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-1st/fig-p7d-c21d-3600-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgea7966f"></a>2nd Run<br />
+<div class="outline-text-5" id="text-orgea7966f">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-60-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-600-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-3600-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgb0fd1cc"></a>3rd Run<br />
+<div class="outline-text-5" id="text-orgb0fd1cc">
+<ul class="org-ul">
+<li><a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-60-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-600-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-3600-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8a5dffb" class="outline-3">
+<h3 id="org8a5dffb">First Half Retained, Second Half Reconstructed</h3>
+<div class="outline-text-3" id="text-org8a5dffb">
+</div>
+<div id="outline-container-org9787f91" class="outline-4">
+<h4 id="org9787f91">Comparison of All Search Strategies</h4>
+<div class="outline-text-4" id="text-org9787f91">
+</div>
+<ul class="org-ul">
+<li><a id="orgf5b1ca5"></a>Aggregated (1st + 2nd + 3rd runs)<br />
+<div class="outline-text-5" id="text-orgf5b1ca5">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-all/fig-p14d-c14d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-all/fig-p14d-c14d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-all/fig-p14d-c14d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgeb00a78"></a>1st Run<br />
+<div class="outline-text-5" id="text-orgeb00a78">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6591400"></a>2nd Run<br />
+<div class="outline-text-5" id="text-org6591400">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6160e94"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org6160e94">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-org61d4f31" class="outline-4">
+<h4 id="org61d4f31">Comparison of Search Strategies <b><b>LNPS</b></b>, <b><b>MP</b></b>, and <b><b>MP-IS</b></b> (as presented in the paper)</h4>
+<div class="outline-text-4" id="text-org61d4f31">
+</div>
+<ul class="org-ul">
+<li><a id="orgd485ede"></a>Aggregated (1st + 2nd + 3rd runs)<br />
+<div class="outline-text-5" id="text-orgd485ede">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-all/fig-p14d-c14d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-all/fig-p14d-c14d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-all/fig-p14d-c14d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgcc61549"></a>1st Run<br />
+<div class="outline-text-5" id="text-orgcc61549">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org58b6216"></a>2nd Run<br />
+<div class="outline-text-5" id="text-org58b6216">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge74342b"></a>3rd Run<br />
+<div class="outline-text-5" id="text-orge74342b">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-org58a3f7b" class="outline-4">
+<h4 id="org58a3f7b">Comparison of Search Strategies <b><b>MP-IS1</b></b>, <b><b>MP-IS10</b></b>, and <b><b>MP-IS100</b></b></h4>
+<div class="outline-text-4" id="text-org58a3f7b">
+</div>
+<ul class="org-ul">
+<li><a id="org000c52b"></a>Aggregated (1st + 2nd + 3rd runs)<br />
+<div class="outline-text-5" id="text-org000c52b">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-all/fig-p14d-c14d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-all/fig-p14d-c14d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-all/fig-p14d-c14d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org4469bfc"></a>1st Run<br />
+<div class="outline-text-5" id="text-org4469bfc">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga866fc4"></a>2nd Run<br />
+<div class="outline-text-5" id="text-orga866fc4">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2f6f92f"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org2f6f92f">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-orga7a9404" class="outline-4">
+<h4 id="orga7a9404">Comparison of Search Strategy <b><b>MP-PS</b></b></h4>
+<div class="outline-text-4" id="text-orga7a9404">
+</div>
+<ul class="org-ul">
+<li><a id="org89df85f"></a>Aggregated (1st + 2nd + 3rd runs)<br />
+<div class="outline-text-5" id="text-org89df85f">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-all/fig-p14d-c14d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-all/fig-p14d-c14d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-all/fig-p14d-c14d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgfd0472b"></a>1st Run<br />
+<div class="outline-text-5" id="text-orgfd0472b">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8bb561b"></a>2nd Run<br />
+<div class="outline-text-5" id="text-org8bb561b">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgc28fe8e"></a>3rd Run<br />
+<div class="outline-text-5" id="text-orgc28fe8e">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-orgd42eb35" class="outline-4">
+<h4 id="orgd42eb35">Comparison of Search Strategy <b><b>PS</b></b></h4>
+<div class="outline-text-4" id="text-orgd42eb35">
+</div>
+<ul class="org-ul">
+<li><a id="orgc4d73c4"></a>Aggregated (1st + 2nd + 3rd runs)<br />
+<div class="outline-text-5" id="text-orgc4d73c4">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-all/fig-p14d-c14d-60-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-all/fig-p14d-c14d-600-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-all/fig-p14d-c14d-3600-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org48935fc"></a>1st Run<br />
+<div class="outline-text-5" id="text-org48935fc">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-60-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-600-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-1st/fig-p14d-c14d-3600-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orge7fda91"></a>2nd Run<br />
+<div class="outline-text-5" id="text-orge7fda91">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-60-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-600-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-3600-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org58ce00e"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org58ce00e">
+<ul class="org-ul">
+<li><a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-60-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-600-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-3600-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf242fe8" class="outline-3">
+<h3 id="orgf242fe8">First three weeks retained, final week reconstructed</h3>
+<div class="outline-text-3" id="text-orgf242fe8">
+</div>
+<div id="outline-container-org81c7297" class="outline-4">
+<h4 id="org81c7297">Comparison of all search strategies</h4>
+<div class="outline-text-4" id="text-org81c7297">
+</div>
+<ul class="org-ul">
+<li><a id="org7daefce"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-org7daefce">
+<ul class="org-ul">
+<li><a href="resolved-p21d-c7d-3600-all/fig-p21d-c7d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-all/fig-p21d-c7d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-all/fig-p21d-c7d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6a5470f"></a>1st Run<br />
+<div class="outline-text-5" id="text-org6a5470f">
+<ul class="org-ul">
+<li><a href="resolved-p21d-c7d-3600-1st/fig-p21d-c7d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-1st/fig-p21d-c7d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-1st/fig-p21d-c7d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd272d2a"></a>2nd Run<br />
+<div class="outline-text-5" id="text-orgd272d2a">
+<ul class="org-ul">
+<li><a href="resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgccecf08"></a>3rd Run<br />
+<div class="outline-text-5" id="text-orgccecf08">
+<ul class="org-ul">
+<li><a href="resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org9b06abe" class="outline-4">
+<h4 id="org9b06abe">Comparison of search strategies <b><b>LNPS</b></b>, <b><b>MP</b></b>, and <b><b>MP-IS</b></b> (presented in the paper)</h4>
+<div class="outline-text-4" id="text-org9b06abe">
+</div>
+<ul class="org-ul">
+<li><a id="org962ed26"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-org962ed26">
+<ul class="org-ul">
+<li><a href="resolved-p21d-c7d-3600-all/fig-p21d-c7d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-all/fig-p21d-c7d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-all/fig-p21d-c7d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org9f8c726"></a>1st Run<br />
+<div class="outline-text-5" id="text-org9f8c726">
+<ul class="org-ul">
+<li><a href="resolved-p21d-c7d-3600-1st/fig-p21d-c7d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-1st/fig-p21d-c7d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-1st/fig-p21d-c7d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6ad24b9"></a>2nd Run<br />
+<div class="outline-text-5" id="text-org6ad24b9">
+<ul class="org-ul">
+<li><a href="resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org8afcce4"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org8afcce4">
+<ul class="org-ul">
+<li><a href="resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgf7ae5f9" class="outline-4">
+<h4 id="orgf7ae5f9">Comparison of search strategies <b><b>MP-IS1</b></b>, <b><b>MP-IS10</b></b>, and <b><b>MP-IS100</b></b></h4>
+<div class="outline-text-4" id="text-orgf7ae5f9">
+</div>
+<ul class="org-ul">
+<li><a id="orgf209e0f"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-orgf209e0f">
+<ul class="org-ul">
+<li><a href="resolved-p21d-c7d-3600-all/fig-p21d-c7d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-all/fig-p21d-c7d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-all/fig-p21d-c7d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5c27ee2"></a>1st Run<br />
+<div class="outline-text-5" id="text-org5c27ee2">
+<ul class="org-ul">
+<li><a href="resolved-p21d-c7d-3600-1st/fig-p21d-c7d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-1st/fig-p21d-c7d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-1st/fig-p21d-c7d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgedf6ca0"></a>2nd Run<br />
+<div class="outline-text-5" id="text-orgedf6ca0">
+<ul class="org-ul">
+<li><a href="resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgda75d16"></a>3rd Run<br />
+<div class="outline-text-5" id="text-orgda75d16">
+<ul class="org-ul">
+<li><a href="resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orgf565c97" class="outline-4">
+<h4 id="orgf565c97">Comparison of search strategy <b><b>MP-PS</b></b></h4>
+<div class="outline-text-4" id="text-orgf565c97">
+</div>
+<ul class="org-ul">
+<li><a id="orgcfa7d9c"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-orgcfa7d9c">
+<ul class="org-ul">
+<li><a href="resolved-p21d-c7d-3600-all/fig-p21d-c7d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-all/fig-p21d-c7d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-all/fig-p21d-c7d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org03204ee"></a>1st Run<br />
+<div class="outline-text-5" id="text-org03204ee">
+<ul class="org-ul">
+<li><a href="resolved-p21d-c7d-3600-1st/fig-p21d-c7d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-1st/fig-p21d-c7d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-1st/fig-p21d-c7d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6247507"></a>2nd Run<br />
+<div class="outline-text-5" id="text-org6247507">
+<ul class="org-ul">
+<li><a href="resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org97f0c6d"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org97f0c6d">
+<ul class="org-ul">
+<li><a href="resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6ca738a" class="outline-3">
+<h3 id="org6ca738a">Entire set retained</h3>
+<div class="outline-text-3" id="text-org6ca738a">
+</div>
+<div id="outline-container-orgab03b5f" class="outline-4">
+<h4 id="orgab03b5f">Comparison of all search strategies</h4>
+<div class="outline-text-4" id="text-orgab03b5f">
+</div>
+<ul class="org-ul">
+<li><a id="org3c3ba77"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-org3c3ba77">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-all/fig-p28d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-all/fig-p28d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-all/fig-p28d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org312ed6d"></a>1st Run<br />
+<div class="outline-text-5" id="text-org312ed6d">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-1st/fig-p28d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-1st/fig-p28d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-1st/fig-p28d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga14f82f"></a>2nd Run<br />
+<div class="outline-text-5" id="text-orga14f82f">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-2nd/fig-p28d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-2nd/fig-p28d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-2nd/fig-p28d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6fdf303"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org6fdf303">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-3rd/fig-p28d-60.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-3rd/fig-p28d-600.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-3rd/fig-p28d-3600.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org79d918f" class="outline-4">
+<h4 id="org79d918f">Comparison of search strategies <b><b>LNPS</b></b>, <b><b>MP</b></b>, and <b><b>MP-IS</b></b> (presented in the paper)</h4>
+<div class="outline-text-4" id="text-org79d918f">
+</div>
+<ul class="org-ul">
+<li><a id="org5e489a9"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-org5e489a9">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-all/fig-p28d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-all/fig-p28d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-all/fig-p28d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org3d8f3e6"></a>1st Run<br />
+<div class="outline-text-5" id="text-org3d8f3e6">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-1st/fig-p28d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-1st/fig-p28d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-1st/fig-p28d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgcdb0e93"></a>2nd Run<br />
+<div class="outline-text-5" id="text-orgcdb0e93">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-2nd/fig-p28d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-2nd/fig-p28d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-2nd/fig-p28d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org45b4947"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org45b4947">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-3rd/fig-p28d-60-paper.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-3rd/fig-p28d-600-paper.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-3rd/fig-p28d-3600-paper.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org47984da" class="outline-4">
+<h4 id="org47984da">Comparison of search strategies <b><b>MP-IS1</b></b>, <b><b>MP-IS10</b></b>, and <b><b>MP-IS100</b></b></h4>
+<div class="outline-text-4" id="text-org47984da">
+</div>
+<ul class="org-ul">
+<li><a id="org7c0ace2"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-org7c0ace2">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-all/fig-p28d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-all/fig-p28d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-all/fig-p28d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga24d31b"></a>1st Run<br />
+<div class="outline-text-5" id="text-orga24d31b">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-1st/fig-p28d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-1st/fig-p28d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-1st/fig-p28d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org4727576"></a>2nd Run<br />
+<div class="outline-text-5" id="text-org4727576">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-2nd/fig-p28d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-2nd/fig-p28d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-2nd/fig-p28d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga5a66ae"></a>3rd Run<br />
+<div class="outline-text-5" id="text-orga5a66ae">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-3rd/fig-p28d-60-mp-is.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-3rd/fig-p28d-600-mp-is.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-3rd/fig-p28d-3600-mp-is.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-orge654ff8" class="outline-4">
+<h4 id="orge654ff8">Comparison of search strategy <b><b>MP-PS</b></b></h4>
+<div class="outline-text-4" id="text-orge654ff8">
+</div>
+<ul class="org-ul">
+<li><a id="org964d1de"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-org964d1de">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-all/fig-p28d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-all/fig-p28d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-all/fig-p28d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd9fdf18"></a>1st Run<br />
+<div class="outline-text-5" id="text-orgd9fdf18">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-1st/fig-p28d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-1st/fig-p28d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-1st/fig-p28d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org5601b4c"></a>2nd Run<br />
+<div class="outline-text-5" id="text-org5601b4c">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-2nd/fig-p28d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-2nd/fig-p28d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-2nd/fig-p28d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orgd50c602"></a>3rd Run<br />
+<div class="outline-text-5" id="text-orgd50c602">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-3rd/fig-p28d-60-mp-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-3rd/fig-p28d-600-mp-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-3rd/fig-p28d-3600-mp-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div id="outline-container-org5667bac" class="outline-4">
+<h4 id="org5667bac">Comparison of search strategy <b><b>PS</b></b></h4>
+<div class="outline-text-4" id="text-org5667bac">
+</div>
+<ul class="org-ul">
+<li><a id="org76f5349"></a>All (1st+2nd+3rd runs)<br />
+<div class="outline-text-5" id="text-org76f5349">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-all/fig-p28d-60-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-all/fig-p28d-600-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-all/fig-p28d-3600-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org6d2d39f"></a>1st Run<br />
+<div class="outline-text-5" id="text-org6d2d39f">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-1st/fig-p28d-60-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-1st/fig-p28d-600-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-1st/fig-p28d-3600-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="orga269ff9"></a>2nd Run<br />
+<div class="outline-text-5" id="text-orga269ff9">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-2nd/fig-p28d-60-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-2nd/fig-p28d-600-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-2nd/fig-p28d-3600-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+<li><a id="org2f75c90"></a>3rd Run<br />
+<div class="outline-text-5" id="text-org2f75c90">
+<ul class="org-ul">
+<li><a href="resolved-p28d-3600-3rd/fig-p28d-60-ps.html">Results with 60-second time limit</a></li>
+<li><a href="resolved-p28d-3600-3rd/fig-p28d-600-ps.html">Results with 600-second time limit</a></li>
+<li><a href="resolved-p28d-3600-3rd/fig-p28d-3600-ps.html">Results with 3600-second time limit</a></li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Hidetomo NABESHIMA, Mutsunori BANBARA, Torsten SCHAUB, Soh TAKEHIDE</p>
-<p class="date">Created: 2025-04-17 木 13:21</p>
+<p class="date">Created: 2025-04-17 木 18:41</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

@@ -5,6 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import holoviews as hv
 from holoviews import opts
+from holoviews.streams import Selection1D
 from bokeh.models import HoverTool
 from bokeh.io import output_file as bokeh_output_file, save
 hv.extension('bokeh')
@@ -154,7 +155,7 @@ def hide_hover_icon(plot, element):
         if isinstance(tool, HoverTool):
             tool.visible = False  # Hoverツールのアイコンを非表示
 
-def plot_holoviews_cactus(csv_file, output_file, type):
+def plot_holoviews_cactus(csv_file, output_file, type, muted_labels=[]):
     df_raw = pd.read_csv(csv_file, index_col=0)
 
     obj_columns = [
@@ -196,8 +197,14 @@ def plot_holoviews_cactus(csv_file, output_file, type):
         g = hv.Scatter(tdf,
                     vdims=[col_name, 'No', 'Instance'],
                     kdims=['No'],
-                    label=col_name)
-        plots.append(hv.Curve(g))
+                    label=label)
+        gg = hv.Curve(g)
+
+        if label in muted_labels:
+            g = g.opts(muted=True)
+            gg = gg.opts(muted=True)
+
+        plots.append(gg)
         plots.append(g)
 
     if type == "obj":
@@ -205,7 +212,7 @@ def plot_holoviews_cactus(csv_file, output_file, type):
     elif type == "diff":
         ylabel = "Modification Rate (% of changed shifts)"
     elif type == "freq":
-        ylabel = "Frequency"
+        ylabel = "Solution Finding Frequency"
 
     graph = hv.Overlay(plots).opts(
         opts.Overlay(
@@ -221,7 +228,6 @@ def plot_holoviews_cactus(csv_file, output_file, type):
         ),
         opts.Scatter(
             tools=['hover'],
-            default_tools=['pan'],
             show_legend=True,
             marker=markers,
             fill_alpha=0.0,
@@ -229,7 +235,7 @@ def plot_holoviews_cactus(csv_file, output_file, type):
             line_width=1,#0.5,
             muted_alpha = 0.0,
             hooks=[hide_hover_icon],
-            hover_mode='vline',
+            #hover_mode='vline',
         ),
     )
     # Save plot
@@ -240,18 +246,17 @@ def plot_holoviews_cactus(csv_file, output_file, type):
         print(f"Saved plot to {output_path}")
     return graph
 
-def plot_all_holoviews_cactus(csv_file, output_file):
-    obj = plot_holoviews_cactus(csv_file, None, "obj")
-    diff = plot_holoviews_cactus(csv_file, None, "diff")
-    freq = plot_holoviews_cactus(csv_file, None, "freq")
+def plot_all_holoviews_cactus(csv_file, output_file, muted_labels=[]):
+    obj = plot_holoviews_cactus(csv_file, None, "obj", muted_labels)
+    diff = plot_holoviews_cactus(csv_file, None, "diff", muted_labels)
+    freq = plot_holoviews_cactus(csv_file, None, "freq", muted_labels)
+    layout = (obj + diff + freq).cols(1)
 
-    layout = (obj + diff + freq).opts(sync_legends=True).cols(1)
     if output_file is not None:
         output_path = f"{output_file.rsplit('.', 1)[0]}.html"
         bokeh_output_file(output_path)
         save(hv.render(layout))
         print(f"Saved plot to {output_path}")
-
 
 def main():
     parser = argparse.ArgumentParser(description="Plot a cactus plot from a CSV file using gnuplotlib.")
@@ -264,6 +269,22 @@ def main():
     plot_matplotlib_cactus(args.csv_file, args.output_file, "freq")
 
     plot_all_holoviews_cactus(args.csv_file, args.output_file)
+
+    mp_is_only = ["MP-Low", "MP-Mid", "MP-High", "MP+PS-Low","MP+PS-Mid", "MP+PS-High", "LNPS-10", "LNPS-30", "LNPS-60", "PS"]
+    bokeh_output_file = f"{args.output_file.rsplit('.', 1)[0]}-mp-is.html"
+    plot_all_holoviews_cactus(args.csv_file, bokeh_output_file, muted_labels=mp_is_only)
+
+    ps_only = ["MP-Low", "MP-Mid", "MP-High", "MP+IS-Low", "MP+IS-Mid", "MP+IS-High", "MP+IS1-Low", "MP+IS1-Mid", "MP+IS1-High", "MP+IS10-Low", "MP+IS10-Mid", "MP+IS10-High", "MP+IS100-Low", "MP+IS100-Mid", "MP+IS100-High", "MP+PS-Low","MP+PS-Mid", "MP+PS-High"]
+    bokeh_output_file = f"{args.output_file.rsplit('.', 1)[0]}-ps.html"
+    plot_all_holoviews_cactus(args.csv_file, bokeh_output_file, muted_labels=ps_only)
+
+    mp_ps_only = ["MP+IS-Low", "MP+IS-Mid", "MP+IS-High", "MP+IS1-Low", "MP+IS1-Mid", "MP+IS1-High", "MP+IS10-Low", "MP+IS10-Mid", "MP+IS10-High", "MP+IS100-Low", "MP+IS100-Mid", "MP+IS100-High", "LNPS-10", "LNPS-30", "LNPS-60", "PS"]
+    bokeh_output_file = f"{args.output_file.rsplit('.', 1)[0]}-mp-ps.html"
+    plot_all_holoviews_cactus(args.csv_file, bokeh_output_file, muted_labels=mp_ps_only)
+
+    paper = ["MP+IS1-Low", "MP+IS1-Mid", "MP+IS1-High", "MP+IS100-Low", "MP+IS100-Mid", "MP+IS100-High", "MP+PS-Low", "MP+PS-Mid", "MP+PS-High", "PS"]
+    bokeh_output_file = f"{args.output_file.rsplit('.', 1)[0]}-paper.html"
+    plot_all_holoviews_cactus(args.csv_file, bokeh_output_file, muted_labels=paper)
 
 if __name__ == "__main__":
     main()

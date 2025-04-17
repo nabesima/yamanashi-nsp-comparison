@@ -13,11 +13,11 @@ paper:
 
 : H. Nabeshima, M. Banbara, T. Schaub, and T. Soh: The Magnificent ASP-based Nurse Scheduling System at the University of Yamanashi Hospital, submitted to ICLP 2025.
 
-** Search Strategies
+* Search Strategies
 
-In addition to the three strategies presented in the paper (LNPS, MP, MP-IS), we
-introduce two additional strategies, MP-PS and PS, making a total of five search
-strategies for comparison.
+In addition to the three strategies presented in the paper (**LNPS**, **MP**,
+**MP-IS**), we introduce two additional strategies, **MP-PS** and **PS**, making
+a total of five search strategies for comparison.
 
 - **LNPS** (Large Neighborhood Prioritized Search) [Sugimori et al. 2024]
   - In our LNPS implementation, if no improved solution is found within a given
@@ -55,78 +55,480 @@ strategies for comparison.
   - This search strategy is a variant of LNPS without automatic restarts.
   - It is included to demonstrate the impact of automatic restarts.
 
-** Results
+* Experimental Instance Settings
 
-[[fileresolved-c28d-3600-1st/fig-c28d-60.html][fig-c28d-60]]
-[[file:resolved-c28d-3600-1st/fig-c28d-3600.html][fig-c28d-3600]]
-[[file:resolved-c28d-3600-1st/fig-c28d-600.html][fig-c28d-600]]
-[[file:resolved-c28d-3600-2nd/fig-c28d-60.html][fig-c28d-60]]
-[[file:resolved-c28d-3600-2nd/fig-c28d-3600.html][fig-c28d-3600]]
-[[file:resolved-c28d-3600-2nd/fig-c28d-600.html][fig-c28d-600]]
-[[file:resolved-c28d-3600-3rd/fig-c28d-60.html][fig-c28d-60]]
-[[file:resolved-c28d-3600-3rd/fig-c28d-3600.html][fig-c28d-3600]]
-[[file:resolved-c28d-3600-3rd/fig-c28d-600.html][fig-c28d-600]]
-[[file:resolved-c28d-comp-is/fig-c28d-comp-is-3600.html][fig-c28d-comp-is-3600]]
-[[file:resolved-c28d-comp-is/fig-c28d-comp-is-60.html][fig-c28d-comp-is-60]]
-[[file:resolved-c28d-comp-is/fig-c28d-comp-is-600.html][fig-c28d-comp-is-600]]
-[[file:resolved-c28d-comp-ps/fig-c28d-comp-ps-600.html][fig-c28d-comp-ps-600]]
-[[file:resolved-c28d-comp-ps/fig-c28d-comp-ps-3600.html][fig-c28d-comp-ps-3600]]
-[[file:resolved-c28d-comp-ps/fig-c28d-comp-ps-60.html][fig-c28d-comp-ps-60]]
-[[file:resolved-c28d-paper/fig-c28d-paper-60.html][fig-c28d-paper-60]]
-[[file:resolved-c28d-paper/fig-c28d-paper-600.html][fig-c28d-paper-600]]
-[[file:resolved-c28d-paper/fig-c28d-paper-3600.html][fig-c28d-paper-3600]]
-[[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-3600.html][fig-p7d-c21d-3600]]
-[[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-60.html][fig-p7d-c21d-60]]
-[[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-600.html][fig-p7d-c21d-600]]
-[[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-3600.html][fig-p7d-c21d-3600]]
-[[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-60.html][fig-p7d-c21d-60]]
-[[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-600.html][fig-p7d-c21d-600]]
-[[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-3600.html][fig-p7d-c21d-3600]]
-[[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-60.html][fig-p7d-c21d-60]]
-[[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-600.html][fig-p7d-c21d-600]]
-[[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-3600.html][fig-p14d-c14d-3600]]
-[[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-600.html][fig-p14d-c14d-600]]
-[[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-60.html][fig-p14d-c14d-60]]
-[[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-3600.html][fig-p14d-c14d-3600]]
-[[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-600.html][fig-p14d-c14d-600]]
-[[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-60.html][fig-p14d-c14d-60]]
-[[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-3600.html][fig-p14d-c14d-3600]]
-[[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-600.html][fig-p14d-c14d-600]]
-[[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-60.html][fig-p14d-c14d-60]]
-[[file:resolved-p14d-c14d-comp-is/fig-p14d-c14d-comp-is-600.html][fig-p14d-c14d-comp-is-600]]
-[[file:resolved-p14d-c14d-comp-is/fig-p14d-c14d-comp-is-60.html][fig-p14d-c14d-comp-is-60]]
-[[file:resolved-p14d-c14d-comp-is/fig-p14d-c14d-comp-is-3600.html][fig-p14d-c14d-comp-is-3600]]
-[[file:resolved-p14d-c14d-comp-ps/fig-p14d-c14d-comp-ps-600.html][fig-p14d-c14d-comp-ps-600]]
-[[file:resolved-p14d-c14d-comp-ps/fig-p14d-c14d-comp-ps-3600.html][fig-p14d-c14d-comp-ps-3600]]
-[[file:resolved-p14d-c14d-comp-ps/fig-p14d-c14d-comp-ps-60.html][fig-p14d-c14d-comp-ps-60]]
-[[file:resolved-p14d-c14d-paper/fig-p14d-c14d-paper-600.html][fig-p14d-c14d-paper-600]]
-[[file:resolved-p14d-c14d-paper/fig-p14d-c14d-paper-60.html][fig-p14d-c14d-paper-60]]
-[[file:resolved-p14d-c14d-paper/fig-p14d-c14d-paper-3600.html][fig-p14d-c14d-paper-3600]]
-[[file:resolved-p21d-c7d-3600-1st/fig-p21d-c7d-3600.html][fig-p21d-c7d-3600]]
-[[file:resolved-p21d-c7d-3600-1st/fig-p21d-c7d-600.html][fig-p21d-c7d-600]]
-[[file:resolved-p21d-c7d-3600-1st/fig-p21d-c7d-60.html][fig-p21d-c7d-60]]
-[[file:resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-3600.html][fig-p21d-c7d-3600]]
-[[file:resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-600.html][fig-p21d-c7d-600]]
-[[file:resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-60.html][fig-p21d-c7d-60]]
-[[file:resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-3600.html][fig-p21d-c7d-3600]]
-[[file:resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-600.html][fig-p21d-c7d-600]]
-[[file:resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-60.html][fig-p21d-c7d-60]]
-[[file:resolved-p28d-3600-1st/fig-p28d-600.html][fig-p28d-600]]
-[[file:resolved-p28d-3600-1st/fig-p28d-3600.html][fig-p28d-3600]]
-[[file:resolved-p28d-3600-1st/fig-p28d-60.html][fig-p28d-60]]
-[[file:resolved-p28d-3600-2nd/fig-p28d-600.html][fig-p28d-600]]
-[[file:resolved-p28d-3600-2nd/fig-p28d-3600.html][fig-p28d-3600]]
-[[file:resolved-p28d-3600-2nd/fig-p28d-60.html][fig-p28d-60]]
-[[file:resolved-p28d-3600-3rd/fig-p28d-600.html][fig-p28d-600]]
-[[file:resolved-p28d-3600-3rd/fig-p28d-3600.html][fig-p28d-3600]]
-[[file:resolved-p28d-3600-3rd/fig-p28d-60.html][fig-p28d-60]]
-[[file:resolved-p28d-comp-is/fig-p28d-comp-is-600.html][fig-p28d-comp-is-600]]
-[[file:resolved-p28d-comp-is/fig-p28d-comp-is-3600.html][fig-p28d-comp-is-3600]]
-[[file:resolved-p28d-comp-is/fig-p28d-comp-is-60.html][fig-p28d-comp-is-60]]
-[[file:resolved-p28d-comp-ps/fig-p28d-comp-ps-600.html][fig-p28d-comp-ps-600]]
-[[file:resolved-p28d-comp-ps/fig-p28d-comp-ps-3600.html][fig-p28d-comp-ps-3600]]
-[[file:resolved-p28d-comp-ps/fig-p28d-comp-ps-60.html][fig-p28d-comp-ps-60]]
-[[file:resolved-p28d-paper/fig-p28d-paper-600.html][fig-p28d-paper-600]]
-[[file:resolved-p28d-paper/fig-p28d-paper-60.html][fig-p28d-paper-60]]
-[[file:resolved-p28d-paper/fig-p28d-paper-3600.html][fig-p28d-paper-3600]]
+We evaluated our system using 50 benchmark instances simulating a typical nurse
+scheduling problem (NSP) at our hospital. Each instance spans a 28-day
+scheduling period with one of five nurse counts: 10, 20, 30, 40, or 50. For each
+setting, 10 instances were generated with different random seeds.
+
+The objective function adopts a four-tier priority structure:
+1. *Staff preferences*
+2. *Inter-shift constraints* (to avoid invalid shift sequences)
+3. *Daily staffing and shift frequency constraints*
+4. *Remaining soft constraints* with the lowest priority
+
+Requested shifts—both preferred and undesired—are embedded in 10% of schedule
+cells and treated as *hard constraints*. Due to this, 60% of the instances are
+initially *unsatisfiable* and require relaxation. In such cases, requested
+shifts are softened with higher priority than ordinary soft constraints, while
+preserving the original hierarchical structure.
+
+All instance data and the generation script are available in this repository.
+
+* Schedule Modification Scenarios
+
+To evaluate schedule reconstruction strategies, an initial solution for each
+instance was generated within a one-hour time limit. Then, an additional 5% of
+requested shifts were added, and evaluation was conducted under the following
+five modification scenarios:
+
+1. *Entire set reconstructed*: The initial solution is completely discarded, and
+  a new schedule is generated from scratch. This serves as a baseline for
+  comparing search strategies without relying on prior assignments.
+
+2. *First week retained, remaining three weeks reconstructed*: Only the first 7
+  days of the initial schedule are retained, and the remaining 21 days are
+  reconstructed.
+
+3. *First half retained, second half reconstructed*: The first 14 days are
+  retained, and only the remaining 14 days are reconstructed.
+
+4. *First three weeks retained, final week reconstructed*: The first 21 days are
+  retained, and only the final 7 days are reconstructed.
+
+5. *Entire set retained*: The entire initial schedule is retained.
+
+In scenarios 2–5, the added requested shifts may also appear in the retained
+portions, potentially causing constraint violations that must be resolved to
+ensure feasibility.
+
+*Note:* Among these scenarios, only scenarios 1 (*entire set reconstructed*), 3
+(*first half retained, second half reconstructed*), and 5 (*entire set
+retained*) are included in the results presented in the paper.
+
+
+* Experimental Results
+
+** Entire set reconstructed
+*** Comparison of all search strategies
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-c28d-3600-all/fig-c28d-60.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-all/fig-c28d-600.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-all/fig-c28d-3600.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-c28d-3600-1st/fig-c28d-60.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-1st/fig-c28d-600.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-1st/fig-c28d-3600.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-c28d-3600-2nd/fig-c28d-60.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-2nd/fig-c28d-600.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-2nd/fig-c28d-3600.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-c28d-3600-3rd/fig-c28d-60.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-3rd/fig-c28d-600.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-3rd/fig-c28d-3600.html][Results with 3600-second time limit]]
+*** Comparison of search strategies **LNPS**, **MP**, and **MP-IS** (presented in the paper)
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-c28d-3600-all/fig-c28d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-all/fig-c28d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-all/fig-c28d-3600-paper.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-c28d-3600-1st/fig-c28d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-1st/fig-c28d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-1st/fig-c28d-3600-paper.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-c28d-3600-2nd/fig-c28d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-2nd/fig-c28d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-2nd/fig-c28d-3600-paper.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-c28d-3600-3rd/fig-c28d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-3rd/fig-c28d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-3rd/fig-c28d-3600-paper.html][Results with 3600-second time limit]]
+*** Comparison of search strategies **MP-IS1**, **MP-IS10**, and **MP-IS100**
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-c28d-3600-all/fig-c28d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-all/fig-c28d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-all/fig-c28d-3600-mp-is.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-c28d-3600-1st/fig-c28d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-1st/fig-c28d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-1st/fig-c28d-3600-mp-is.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-c28d-3600-2nd/fig-c28d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-2nd/fig-c28d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-2nd/fig-c28d-3600-mp-is.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-c28d-3600-3rd/fig-c28d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-3rd/fig-c28d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-3rd/fig-c28d-3600-mp-is.html][Results with 3600-second time limit]]
+*** Comparison of search strategy **MP-PS**
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-c28d-3600-all/fig-c28d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-all/fig-c28d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-all/fig-c28d-3600-mp-ps.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-c28d-3600-1st/fig-c28d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-1st/fig-c28d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-1st/fig-c28d-3600-mp-ps.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-c28d-3600-2nd/fig-c28d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-2nd/fig-c28d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-2nd/fig-c28d-3600-mp-ps.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-c28d-3600-3rd/fig-c28d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-3rd/fig-c28d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-3rd/fig-c28d-3600-mp-ps.html][Results with 3600-second time limit]]
+*** Comparison of search strategy **PS**
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-c28d-3600-all/fig-c28d-60-ps.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-all/fig-c28d-600-ps.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-all/fig-c28d-3600-ps.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-c28d-3600-1st/fig-c28d-60-ps.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-1st/fig-c28d-600-ps.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-1st/fig-c28d-3600-ps.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-c28d-3600-2nd/fig-c28d-60-ps.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-2nd/fig-c28d-600-ps.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-2nd/fig-c28d-3600-ps.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-c28d-3600-3rd/fig-c28d-60-ps.html][Results with 60-second time limit]]
+- [[file:resolved-c28d-3600-3rd/fig-c28d-600-ps.html][Results with 600-second time limit]]
+- [[file:resolved-c28d-3600-3rd/fig-c28d-3600-ps.html][Results with 3600-second time limit]]
+
+** First week retained, remaining three weeks reconstructed
+*** Comparison of all search strategies
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-p7d-c21d-3600-all/fig-p7d-c21d-60.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-all/fig-p7d-c21d-600.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-all/fig-p7d-c21d-3600.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-60.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-600.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-3600.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-60.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-600.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-3600.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-60.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-600.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-3600.html][Results with 3600-second time limit]]
+*** Comparison of search strategies **LNPS**, **MP**, and **MP-IS** (presented in the paper)
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-p7d-c21d-3600-all/fig-p7d-c21d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-all/fig-p7d-c21d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-all/fig-p7d-c21d-3600-paper.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-3600-paper.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-3600-paper.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-3600-paper.html][Results with 3600-second time limit]]
+*** Comparison of search strategies **MP-IS1**, **MP-IS10**, and **MP-IS100**
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-p7d-c21d-3600-all/fig-p7d-c21d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-all/fig-p7d-c21d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-all/fig-p7d-c21d-3600-mp-is.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-3600-mp-is.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-3600-mp-is.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-3600-mp-is.html][Results with 3600-second time limit]]
+*** Comparison of search strategy **MP-PS**
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-p7d-c21d-3600-all/fig-p7d-c21d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-all/fig-p7d-c21d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-all/fig-p7d-c21d-3600-mp-ps.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-3600-mp-ps.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-3600-mp-ps.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-3600-mp-ps.html][Results with 3600-second time limit]]
+*** Comparison of search strategy **PS**
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-p7d-c21d-3600-all/fig-p7d-c21d-60-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-all/fig-p7d-c21d-600-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-all/fig-p7d-c21d-3600-ps.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-60-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-600-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-1st/fig-p7d-c21d-3600-ps.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-60-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-600-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-2nd/fig-p7d-c21d-3600-ps.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-60-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-600-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p7d-c21d-3600-3rd/fig-p7d-c21d-3600-ps.html][Results with 3600-second time limit]]
+
+** First Half Retained, Second Half Reconstructed
+*** Comparison of All Search Strategies
+**** Aggregated (1st + 2nd + 3rd runs)
+- [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-60.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-600.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-3600.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-60.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-600.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-3600.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-60.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-600.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-3600.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-60.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-600.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-3600.html][Results with 3600-second time limit]]
+
+*** Comparison of Search Strategies **LNPS**, **MP**, and **MP-IS** (as presented in the paper)
+**** Aggregated (1st + 2nd + 3rd runs)
+- [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-3600-paper.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-3600-paper.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-3600-paper.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-3600-paper.html][Results with 3600-second time limit]]
+
+*** Comparison of Search Strategies **MP-IS1**, **MP-IS10**, and **MP-IS100**
+**** Aggregated (1st + 2nd + 3rd runs)
+- [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-3600-mp-is.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-3600-mp-is.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-3600-mp-is.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-3600-mp-is.html][Results with 3600-second time limit]]
+
+*** Comparison of Search Strategy **MP-PS**
+**** Aggregated (1st + 2nd + 3rd runs)
+- [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-3600-mp-ps.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-3600-mp-ps.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-3600-mp-ps.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-3600-mp-ps.html][Results with 3600-second time limit]]
+
+*** Comparison of Search Strategy **PS**
+**** Aggregated (1st + 2nd + 3rd runs)
+- [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-60-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-600-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-all/fig-p14d-c14d-3600-ps.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-60-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-600-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-1st/fig-p14d-c14d-3600-ps.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-60-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-600-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-2nd/fig-p14d-c14d-3600-ps.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-60-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-600-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p14d-c14d-3600-3rd/fig-p14d-c14d-3600-ps.html][Results with 3600-second time limit]]
+
+** First three weeks retained, final week reconstructed
+*** Comparison of all search strategies
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-p21d-c7d-3600-all/fig-p21d-c7d-60.html][Results with 60-second time limit]]
+- [[file:resolved-p21d-c7d-3600-all/fig-p21d-c7d-600.html][Results with 600-second time limit]]
+- [[file:resolved-p21d-c7d-3600-all/fig-p21d-c7d-3600.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p21d-c7d-3600-1st/fig-p21d-c7d-60.html][Results with 60-second time limit]]
+- [[file:resolved-p21d-c7d-3600-1st/fig-p21d-c7d-600.html][Results with 600-second time limit]]
+- [[file:resolved-p21d-c7d-3600-1st/fig-p21d-c7d-3600.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-60.html][Results with 60-second time limit]]
+- [[file:resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-600.html][Results with 600-second time limit]]
+- [[file:resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-3600.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-60.html][Results with 60-second time limit]]
+- [[file:resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-600.html][Results with 600-second time limit]]
+- [[file:resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-3600.html][Results with 3600-second time limit]]
+*** Comparison of search strategies **LNPS**, **MP**, and **MP-IS** (presented in the paper)
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-p21d-c7d-3600-all/fig-p21d-c7d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-p21d-c7d-3600-all/fig-p21d-c7d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-p21d-c7d-3600-all/fig-p21d-c7d-3600-paper.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p21d-c7d-3600-1st/fig-p21d-c7d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-p21d-c7d-3600-1st/fig-p21d-c7d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-p21d-c7d-3600-1st/fig-p21d-c7d-3600-paper.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-3600-paper.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-3600-paper.html][Results with 3600-second time limit]]
+*** Comparison of search strategies **MP-IS1**, **MP-IS10**, and **MP-IS100**
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-p21d-c7d-3600-all/fig-p21d-c7d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-p21d-c7d-3600-all/fig-p21d-c7d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-p21d-c7d-3600-all/fig-p21d-c7d-3600-mp-is.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p21d-c7d-3600-1st/fig-p21d-c7d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-p21d-c7d-3600-1st/fig-p21d-c7d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-p21d-c7d-3600-1st/fig-p21d-c7d-3600-mp-is.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-3600-mp-is.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-3600-mp-is.html][Results with 3600-second time limit]]
+*** Comparison of search strategy **MP-PS**
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-p21d-c7d-3600-all/fig-p21d-c7d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p21d-c7d-3600-all/fig-p21d-c7d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p21d-c7d-3600-all/fig-p21d-c7d-3600-mp-ps.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p21d-c7d-3600-1st/fig-p21d-c7d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p21d-c7d-3600-1st/fig-p21d-c7d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p21d-c7d-3600-1st/fig-p21d-c7d-3600-mp-ps.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p21d-c7d-3600-2nd/fig-p21d-c7d-3600-mp-ps.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p21d-c7d-3600-3rd/fig-p21d-c7d-3600-mp-ps.html][Results with 3600-second time limit]]
+
+** Entire set retained
+*** Comparison of all search strategies
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-p28d-3600-all/fig-p28d-60.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-all/fig-p28d-600.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-all/fig-p28d-3600.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p28d-3600-1st/fig-p28d-60.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-1st/fig-p28d-600.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-1st/fig-p28d-3600.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p28d-3600-2nd/fig-p28d-60.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-2nd/fig-p28d-600.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-2nd/fig-p28d-3600.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p28d-3600-3rd/fig-p28d-60.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-3rd/fig-p28d-600.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-3rd/fig-p28d-3600.html][Results with 3600-second time limit]]
+*** Comparison of search strategies **LNPS**, **MP**, and **MP-IS** (presented in the paper)
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-p28d-3600-all/fig-p28d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-all/fig-p28d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-all/fig-p28d-3600-paper.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p28d-3600-1st/fig-p28d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-1st/fig-p28d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-1st/fig-p28d-3600-paper.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p28d-3600-2nd/fig-p28d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-2nd/fig-p28d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-2nd/fig-p28d-3600-paper.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p28d-3600-3rd/fig-p28d-60-paper.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-3rd/fig-p28d-600-paper.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-3rd/fig-p28d-3600-paper.html][Results with 3600-second time limit]]
+*** Comparison of search strategies **MP-IS1**, **MP-IS10**, and **MP-IS100**
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-p28d-3600-all/fig-p28d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-all/fig-p28d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-all/fig-p28d-3600-mp-is.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p28d-3600-1st/fig-p28d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-1st/fig-p28d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-1st/fig-p28d-3600-mp-is.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p28d-3600-2nd/fig-p28d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-2nd/fig-p28d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-2nd/fig-p28d-3600-mp-is.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p28d-3600-3rd/fig-p28d-60-mp-is.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-3rd/fig-p28d-600-mp-is.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-3rd/fig-p28d-3600-mp-is.html][Results with 3600-second time limit]]
+*** Comparison of search strategy **MP-PS**
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-p28d-3600-all/fig-p28d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-all/fig-p28d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-all/fig-p28d-3600-mp-ps.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p28d-3600-1st/fig-p28d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-1st/fig-p28d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-1st/fig-p28d-3600-mp-ps.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p28d-3600-2nd/fig-p28d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-2nd/fig-p28d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-2nd/fig-p28d-3600-mp-ps.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p28d-3600-3rd/fig-p28d-60-mp-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-3rd/fig-p28d-600-mp-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-3rd/fig-p28d-3600-mp-ps.html][Results with 3600-second time limit]]
+*** Comparison of search strategy **PS**
+**** All (1st+2nd+3rd runs)
+- [[file:resolved-p28d-3600-all/fig-p28d-60-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-all/fig-p28d-600-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-all/fig-p28d-3600-ps.html][Results with 3600-second time limit]]
+**** 1st Run
+- [[file:resolved-p28d-3600-1st/fig-p28d-60-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-1st/fig-p28d-600-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-1st/fig-p28d-3600-ps.html][Results with 3600-second time limit]]
+**** 2nd Run
+- [[file:resolved-p28d-3600-2nd/fig-p28d-60-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-2nd/fig-p28d-600-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-2nd/fig-p28d-3600-ps.html][Results with 3600-second time limit]]
+**** 3rd Run
+- [[file:resolved-p28d-3600-3rd/fig-p28d-60-ps.html][Results with 60-second time limit]]
+- [[file:resolved-p28d-3600-3rd/fig-p28d-600-ps.html][Results with 600-second time limit]]
+- [[file:resolved-p28d-3600-3rd/fig-p28d-3600-ps.html][Results with 3600-second time limit]]
 
